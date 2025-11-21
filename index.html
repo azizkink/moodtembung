@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TembangMood - Tembang Jumbuh kaliyan Raos Panjenengan</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Animated Background Music Notes -->
+    <div class="music-note" style="left: 10%; animation-delay: 0s;">♪</div>
+    <div class="music-note" style="left: 30%; animation-delay: 3s;">♫</div>
+    <div class="music-note" style="left: 50%; animation-delay: 6s;">♪</div>
+    <div class="music-note" style="left: 70%; animation-delay: 9s;">♫</div>
+    <div class="music-note" style="left: 90%; animation-delay: 12s;">♪</div>
+
+    <div class="container">
+
+        <!-- NAVBAR -->
+        <nav>
+            <div class="logo" onclick="showPage('home')">
+                <span>🎵 TembungMood</span>
+            </div>
+        </nav>
+
+        <!-- HOME PAGE -->
+        <div id="home" class="page active">
+            <section class="hero">
+                <div class="hero-content">
+                    <h1>Tembang Ingkang Jumbuh<br>kaliyan <span class="highlight">Raos</span> Panjenengan</h1>
+                    <p>Manggihana tembang ingkang jumbuh kaliyan raos manah panjenengan—enggal lan trep.</p>
+                    <button class="cta-button"
+                        onclick="document.getElementById('mood-cards').scrollIntoView({behavior:'smooth'})">
+                        Wiwiti Samenika ✨
+                    </button>
+                </div>
+
+                <div class="mood-preview floating" id="mood-cards">
+                    <div class="mood-card" onclick="showMoodPage('happy')">
+                        <div class="mood-icon">😊</div>
+                        <div class="mood-name">Bingah</div>
+                    </div>
+                    <div class="mood-card" onclick="showMoodPage('sad')">
+                        <div class="mood-icon">😔</div>
+                        <div class="mood-name">Sedhih</div>
+                    </div>
+                    <div class="mood-card" onclick="showMoodPage('energized')">
+                        <div class="mood-icon">💪</div>
+                        <div class="mood-name">Sumringah</div>
+                    </div>
+                    <div class="mood-card" onclick="showMoodPage('calm')">
+                        <div class="mood-icon">😌</div>
+                        <div class="mood-name">Ayem</div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- MOOD PAGES -->
+        <div id="happy-page" class="page">
+            <div class="mood-detail">
+                <button class="back-button" onclick="showPage('home')">← Wangsul</button>
+                <button class="refresh-button" onclick="refreshMood('happy')">Enggalaken Malih</button>
+
+                <div class="mood-header">
+                    <div class="big-icon">😊</div>
+                    <h1>Raos Bingah</h1>
+                    <p>Tembang-tembang ingkang sumringah ndadosaken dinten panjenengan langkung padhang!</p>
+                </div>
+
+                <div class="song-list"></div>
+            </div>
+        </div>
+
+        <div id="sad-page" class="page">
+            <div class="mood-detail">
+                <button class="back-button" onclick="showPage('home')">← Wangsul</button>
+                <button class="refresh-button" onclick="refreshMood('sad')">Enggalaken Malih</button>
+
+                <div class="mood-header">
+                    <div class="big-icon">😔</div>
+                    <h1>Raos Sedhih</h1>
+                    <p>Tembang kangge ngancani nalika badhe ngedalaken raos galih.</p>
+                </div>
+
+                <div class="song-list"></div>
+            </div>
+        </div>
+
+        <div id="energized-page" class="page">
+            <div class="mood-detail">
+                <button class="back-button" onclick="showPage('home')">← Wangsul</button>
+                <button class="refresh-button" onclick="refreshMood('energized')">Enggalaken Malih</button>
+
+                <div class="mood-header">
+                    <div class="big-icon">💪</div>
+                    <h1>Raos Sumringah</h1>
+                    <p>Tembang ingkang kebak semangat kangge produktif lan gladhen!</p>
+                </div>
+
+                <div class="song-list"></div>
+            </div>
+        </div>
+
+        <div id="calm-page" class="page">
+            <div class="mood-detail">
+                <button class="back-button" onclick="showPage('home')">← Wangsul</button>
+                <button class="refresh-button" onclick="refreshMood('calm')">Enggalaken Malih</button>
+
+                <div class="mood-header">
+                    <div class="big-icon">😌</div>
+                    <h1>Raos Ayem</h1>
+                    <p>Tembang ingkang nenangaken kangge semedi lan ngaso.</p>
+                </div>
+
+                <div class="song-list"></div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
